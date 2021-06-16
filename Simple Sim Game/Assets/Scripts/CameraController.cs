@@ -5,12 +5,12 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     [SerializeField] private Transform target;
-    [SerializeField] private float smoothing;
+    [SerializeField] private float smoothing = 2f;
 
     private Vector3 targetPosition;
     
     
-    void LateUpdate()
+    void FixedUpdate()
     {
         targetPosition = new Vector3(target.position.x, target.position.y, transform.position.z);
 
