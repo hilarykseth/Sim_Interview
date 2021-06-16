@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
 
     void PlayerDirection()
     {
-        movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
         PlayerAnimation();
     }
 
