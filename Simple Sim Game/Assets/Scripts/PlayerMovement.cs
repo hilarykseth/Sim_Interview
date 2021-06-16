@@ -20,6 +20,11 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         PlayerDirection();
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     void FixedUpdate()
